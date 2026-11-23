@@ -1,0 +1,15 @@
+{
+  "name": "break-my-agent",
+  "version": "0.1.0",
+  "description": "A maintenance-text triage agent for a fictional property manager, attacked with 20 trap messages, first AI-only and then with guardrails.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "build": "node scripts/build-workflows.mjs",
+    "traps:v1": "node runner/run-traps.mjs --version v1 --runs 3",
+    "traps:v2": "node runner/run-traps.mjs --version v2 --runs 3"
+  }
+}
